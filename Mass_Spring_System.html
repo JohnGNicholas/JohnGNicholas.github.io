@@ -13,7 +13,28 @@ layout: default
   This script utilizes Euler's method to simulate the position and velocity of the mass given initial conditions.
   A diagram of this system is shown below:</p>
   <img src="Mass_Spring_System_Diagram.png" alt="Mass Spring System diagram" height="429" width="513">
-  <p>This simulation describes the motion of the system when released from an initial compression. 
+  <p>
+    The only force present in this system is the spring force, which is proportional and opposite to the displacement:
+    <br><br>
+    &Sum;F = ma = -kx
+    <br><br>
+    Solving for acceleration and substituting a=d<sup>2</sup>x/dt<sup>2</sup>:
+    <br><br>
+    d<sup>2</sup>x/dt<sup>2</sup> = -kx/m
+    <br><br>
+    We will replace this second-order ordinary differential equation with a system of two first-order ODEs by defining v, the derivative of x:
+    <br><br>
+    dx/dt = v
+    <br>
+    dv/dt = d<sup>2</sup>x/dt<sup>2</sup> = -kx/m
+    <br><br>
+    We will use Euler's method to approximate x(t) and v(t) using a step size of 'dt':
+    <br><br>
+    v(t+dt) = v(t) + dv/dt(t)*dt = v(t) + [-kx(t)/m]*dt
+    <br>
+    x(t+dt) = x(t) + dx/dt(t)*dt = x(t) + v(t)*dt
+    <br><br>
+    This simulation describes the motion of the system when released from an initial compression. 
     The initial position of the mass for this simulation is a compression of 0.1 m.
     The mass is released from rest, so the initial velocity is 0 m/s.
     <br><br>
