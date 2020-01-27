@@ -18,9 +18,15 @@ layout: default
   <img src="RLC_Circuit_Diagram.png" alt="RLC Circuit diagram" height="314" width="314">
   <p>This simulation approximates the natural response of the circuit using Euler's method. 
     The natural response is the behavior of the circuit when the open switch is closed and the circuit is completed.
+    <br>
     The initial conditions for this simulation are a charge on the capacitor to a potential of 50 V.
     As charge cannot flow instantaneously, the initial current through the circuit is 0 A.
     Due to Kirchoff's Voltage Law, the voltage across the inductor is equal to the voltage across the capacitor (50 V).
-    As the voltage across an inductor is equal to its inductance multiplied by the derivative of current, the initial rate of change of current is 5 A/s.</p>
+    As the voltage across an inductor is equal to its inductance multiplied by the derivative of current, the initial rate of change of current is 5 A/s.
+    <br>
+    The output of this simulation is displayed as a current-time plot below:
+  </p>
+  <img src="RLC_Circuit_Output.jpg" alt="RLC Circuit output" height="315" width="420">
+  <p>The script to perform this calculation is available below:</p>
   <script src="https://gist.github.com/JohnGNicholas/0044f62582f3ec9e7e2cce0260238284.js"></script>
 </body>
