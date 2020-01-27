@@ -8,9 +8,19 @@ layout: default
   <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-<p>This page is currently under construction. Please view <a href='https://github.com/JohnGNicholas/Mechanics/tree/master/RLC_Circuit' target="_blank">this project on GitHub</a>.</p>
-<br>
-<p>An RLC circuit is a circuit that contains resistive (R), inductive (L), and capacitive (C) elements. The inductive and capacitive elements of the circuit cause the current around the loop to oscillate. The resistive element of the circuit attenuates the oscillations, decreasing their magnitude over time.</p>
-<img src="RLC_Diagram.png" alt="RLC Circuit diagram" height="204" width="232"> 
-<script src="https://gist.github.com/JohnGNicholas/0044f62582f3ec9e7e2cce0260238284.js"></script>
+  <p>This page is currently under construction. Please view <a href='https://github.com/JohnGNicholas/Mechanics/tree/master/RLC_Circuit' target="_blank">this project on GitHub</a>.</p>
+  <br>
+  <h1>RLC Circuit Simulation</h1>
+  <p>An RLC circuit is a circuit that contains resistive (R), inductive (L), and capacitive (C) elements.
+    The inductive and capacitive elements of the circuit cause the current around the loop to oscillate. 
+    The resistive element of the circuit attenuates the oscillations, decreasing their magnitude over time. 
+    A diagram of this circuit is shown below:</p>
+  <img src="RLC_Circuit_Diagram.png" alt="RLC Circuit diagram" height="204" width="232">
+  <p>This simulation approximates the natural response of the circuit using Euler's method. 
+    The natural response is the behavior of the circuit when the open switch is closed and the circuit is completed.
+    The initial conditions for this simulation are a charge on the capacitor to a potential of 50 V.
+    As charge cannot flow instantaneously, the initial current through the circuit is 0 A.
+    Due to Kirchoff's Voltage Law, the voltage across the inductor is equal to the voltage across the capacitor (50 V).
+    As the voltage across an inductor is equal to its inductance multiplied by the derivative of current, the initial rate of change of current is 5 A/s.</p>
+  <script src="https://gist.github.com/JohnGNicholas/0044f62582f3ec9e7e2cce0260238284.js"></script>
 </body>
