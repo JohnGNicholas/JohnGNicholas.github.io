@@ -18,21 +18,21 @@ layout: default
     <br><br>
     <img src="https://latex.codecogs.com/gif.latex?\sum&space;F=ma-kx" title="\sum F=ma-kx" />
     <br><br>
-    Solving for acceleration and substituting a=d<sup>2</sup>x/dt<sup>2</sup>:
+    Solving for acceleration and substituting <img src="https://latex.codecogs.com/gif.latex?a=\frac{d^{2}x}{dt^{2}}" title="a=\frac{d^{2}x}{dt^{2}}" />:
     <br><br>
-    d<sup>2</sup>x/dt<sup>2</sup> = -kx/m
+    <img src="https://latex.codecogs.com/gif.latex?\frac{d^{2}x}{dt^{2}}=\frac{-kx}{m}" title="\frac{d^{2}x}{dt^{2}}=\frac{-kx}{m}" />
     <br><br>
     We will replace this second-order ordinary differential equation with a system of two first-order ODEs by defining v, the derivative of x:
     <br><br>
-    dx/dt = v
+    <img src="https://latex.codecogs.com/gif.latex?\frac{dx}{dt}=v" title="\frac{dx}{dt}=v" />
     <br>
-    dv/dt = d<sup>2</sup>x/dt<sup>2</sup> = -kx/m
+    <img src="https://latex.codecogs.com/gif.latex?\frac{dv}{dt}=\frac{d^{2}x}{dt^{2}}=\frac{-kx}{m}" title="\frac{dv}{dt}=\frac{d^{2}x}{dt^{2}}=\frac{-kx}{m}" />
     <br><br>
     We will use Euler's method to approximate x(t) and v(t) using a step size of 'dt':
     <br><br>
-    v(t+dt) = v(t) + dv/dt(t)*dt = v(t) + [-kx(t)/m]*dt
+    <img src="https://latex.codecogs.com/gif.latex?v(t&plus;dt)=v(t)&plus;\frac{dv}{dt}(t)dt=v(t)&plus;\frac{-kx(t)}{m}dt" title="v(t+dt)=v(t)+\frac{dv}{dt}(t)dt=v(t)+\frac{-kx(t)}{m}dt" />
     <br>
-    x(t+dt) = x(t) + dx/dt(t)*dt = x(t) + v(t)*dt
+    <img src="https://latex.codecogs.com/gif.latex?x(t&plus;dt)=x(t)&plus;\frac{dx}{dt}(t)dt=x(t)&plus;v(t)dt" title="x(t+dt)=x(t)+\frac{dx}{dt}(t)dt=x(t)+v(t)dt" />
     <br><br>
     This simulation describes the motion of the system when released from an initial compression. 
     The initial position of the mass for this simulation is a compression of 0.1 m.
