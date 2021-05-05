@@ -2,10 +2,9 @@
 
 import feedparser
 import bs4
-import csv
 
 urls = []
-maxFeedEntries = 10
+maxFeedEntries = 8
 
 # Open a list of RSS feeds to aggregate
 with open("feedList.txt","r") as file:
@@ -25,7 +24,7 @@ for url in urls:
   header.append(feed.feed.title)
   # Insert new links into the file for each link in the RSS document
   if feed.feed.title == "Hacker News":
-    numEntries = min(2*maxFeedEntries,len(feed.entries))
+    numEntries = min(3*maxFeedEntries,len(feed.entries))
   else:
     numEntries = min(maxFeedEntries,len(feed.entries))
   for i in list(range(numEntries)):
