@@ -5,7 +5,7 @@ import bs4
 import csv
 
 urls = []
-maxFeedEntries = 15
+maxFeedEntries = 10
 
 # Open a list of RSS feeds to aggregate
 with open("feedList.txt","r") as file:
@@ -21,10 +21,14 @@ with open("feedTemplate.html") as fin:
 for url in urls:
   feed = feedparser.parse(url)
   # Create a new header for the subscription
-  header = soup.new_tag("li")
+  header = soup.new_tag("ul")
   header.append(feed.feed.title)
   # Insert new links into the file for each link in the RSS document
-  for i in list(range(min(maxFeedEntries,len(feed.entries)))):
+  if feed.feed.title == "Hacker News":
+    numEntries = min(2*maxFeedEntries,len(feed.entries))
+  else:
+    numEntries = min(maxFeedEntries,len(feed.entries))
+  for i in list(range(numEntries)):
     entry = feed.entries[i]
     # Create a new paragraph
     paragraph = soup.new_tag("ul")
