@@ -21,13 +21,13 @@ with open("feedTemplate.html") as fin:
 for url in urls:
   feed = feedparser.parse(url)
   # Create a new header for the subscription
-  header = soup.new_tag("h2")
+  header = soup.new_tag("li")
   header.append(feed.feed.title)
   # Insert new links into the file for each link in the RSS document
   for i in list(range(min(maxFeedEntries,len(feed.entries)))):
     entry = feed.entries[i]
     # Create a new paragraph
-    paragraph = soup.new_tag("p")
+    paragraph = soup.new_tag("ul")
     # Create a new hyperlink with our information
     hyperlink = soup.new_tag("a", href=entry.link)
     hyperlink.append(entry.title)
