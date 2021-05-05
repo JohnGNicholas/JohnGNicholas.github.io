@@ -33,10 +33,9 @@ for url in urls:
     hyperlink.append(entry.title)
     # Place the link into the paragraph and the paragraph into the body
     paragraph.append(hyperlink)
+    header.append(paragraph)
   # Put the feed title in larger font in the HTML body
   soup.body.append(header)
-  # Put the links in the body of the paragraph
-  soup.body.append(paragraph)
 
 # Print the BeautifulSoup object into the desired file to be displayed on the site
 with open("feed.html", "w") as fout:
