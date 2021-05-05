@@ -17,7 +17,7 @@ for i in list(range(len(feed.entries))):
   # Create a new paragraph
   paragraph = soup.new_tag("p")
   # Create a new hyperlink with our information
-  hyperlink = soup.new_tag("link", href=entry.link)
+  hyperlink = soup.new_tag("a", href=entry.link)
   hyperlink.append(entry.title)
   # Place the link into the paragraph and the paragraph into the body
   paragraph.append(hyperlink)
