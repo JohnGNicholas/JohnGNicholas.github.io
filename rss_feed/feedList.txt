@@ -3,4 +3,9 @@ https://waitbutwhy.com/feed
 https://xkcd.com/rss.xml
 https://www.strongtowns.org/journal?format=rss
 https://feeds.feedburner.com/oatmealfeed
+https://api.quantamagazine.org/feed/
+https://matuzo.at/feed_all.xml?rev=1619946953829
+https://writings.stephenwolfram.com/feed/
+https://aperiodical.com/feed/
+https://mathwithbaddrawings.com/feed/
 https://news.ycombinator.com/rss
