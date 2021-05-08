@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import datetime
 import feedparser
 import bs4
 
@@ -15,6 +16,7 @@ with open("feedList.txt","r") as file:
 with open("feedTemplate.html") as fin:
   txt = fin.read()
   soup = bs4.BeautifulSoup(txt,"html.parser")
+
 
 # Parse the RSS documents for each feed
 for url in urls:
@@ -44,4 +46,3 @@ for url in urls:
 with open("feed.html", "w") as fout:
   # Write the entire document
   fout.write(str(soup.prettify()))
-
