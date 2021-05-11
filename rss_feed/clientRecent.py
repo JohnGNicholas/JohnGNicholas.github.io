@@ -69,7 +69,7 @@ older_header_added = False
 
 # Create html paragraph in BeautifulSoup
 paragraph = soup.new_tag("p")
-today_header = soup.new_tag("h6")
+today_header = soup.new_tag("h5")
 today_header.append("Today")
 paragraph.append(today_header)
 # Create a line break object for organization
@@ -81,17 +81,17 @@ for i in range(len(links)):
   post_age = datetime.now() - datetime.fromtimestamp(mktime(link["date"]))
   # Add recency headers, but only once
   if post_age >= today_dt and not yesterday_header_added:
-    yesterday_header = soup.new_tag("h6")
+    yesterday_header = soup.new_tag("h5")
     yesterday_header.append("Yesterday")
     paragraph.append(yesterday_header)
     yesterday_header_added  = True
   elif post_age >= yesterday_dt and not last_week_header_added:
-    last_week_header = soup.new_tag("h6")
+    last_week_header = soup.new_tag("h5")
     last_week_header.append("Last Week")
     paragraph.append(last_week_header)
     last_week_header_added = True
   elif post_age >= last_week_dt and not older_header_added:
-    older_header = soup.new_tag("h6")
+    older_header = soup.new_tag("h5")
     older_header.append("Older")
     paragraph.append(older_header)
     older_header_added = True
@@ -99,11 +99,11 @@ for i in range(len(links)):
   hyperlink = soup.new_tag("a", href=link["url"])
   hyperlink.append(link["entryTitle"])
   # Feed title and y:m:d date
-  detail_string = "[{}]: {}:{}:{}".format(link["feedTitle"],link["date"][0],link["date"][1],link["date"][2])
+  detail_string = " [{}]: {}:{}:{}".format(link["feedTitle"],link["date"][0],link["date"][1],link["date"][2])
   paragraph.append(hyperlink)
+  paragraph.append(detail_string)
   line_break = soup.new_tag("br")
   paragraph.append(line_break)
-  paragraph.append(detail_string)
   line_break = soup.new_tag("br")
   paragraph.append(line_break)
 soup.body.append(paragraph)
