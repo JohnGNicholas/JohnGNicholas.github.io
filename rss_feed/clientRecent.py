@@ -105,8 +105,8 @@ for i in range(len(links)):
   paragraph.append(date_string)
   line_break = soup.new_tag("br")
   paragraph.append(line_break)
-  #line_break = soup.new_tag("br")
-  #paragraph.append(line_break)
+  line_break = soup.new_tag("br")
+  paragraph.append(line_break)
 soup.body.append(paragraph)
 
 # Print the BeautifulSoup object into the desired file to be displayed on the site
