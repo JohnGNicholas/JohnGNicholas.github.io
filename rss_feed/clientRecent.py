@@ -73,7 +73,7 @@ today_header = soup.new_tag("h6")
 today_header.append("Today")
 paragraph.append(today_header)
 # Create a line break object for organization
-line_break = soup.new_tag("br")
+line_break = "<br>"
 
 # Iterate over the links we downloaded
 for i in range(len(links)):
