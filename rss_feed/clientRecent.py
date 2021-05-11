@@ -99,9 +99,10 @@ for i in range(len(links)):
   hyperlink = soup.new_tag("a", href=link["url"])
   hyperlink.append(link["entryTitle"])
   # Feed title and y:m:d date
-  detail_string = " [{}]: {}:{}:{}".format(link["feedTitle"],link["date"][0],link["date"][1],link["date"][2])
+  date_string = " ({}:{}:{})".format(link["date"][0],link["date"][1],link["date"][2])
+  paragraph.append("[{}] ".format(link["feedTitle"]))
   paragraph.append(hyperlink)
-  paragraph.append(detail_string)
+  paragraph.append(date_string)
   line_break = soup.new_tag("br")
   paragraph.append(line_break)
   line_break = soup.new_tag("br")
