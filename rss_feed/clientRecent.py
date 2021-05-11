@@ -73,7 +73,6 @@ today_header = soup.new_tag("h6")
 today_header.append("Today")
 paragraph.append(today_header)
 # Create a line break object for organization
-line_break = "<br>"
 
 # Iterate over the links we downloaded
 for i in range(len(links)):
@@ -102,8 +101,10 @@ for i in range(len(links)):
   # Feed title and y:m:d date
   detail_string = "[{}]: {}:{}:{}".format(link["feedTitle"],link["date"][0],link["date"][1],link["date"][2])
   paragraph.append(hyperlink)
+  line_break = soup.new_tag("br")
   paragraph.append(line_break)
   paragraph.append(detail_string)
+  line_break = soup.new_tag("br")
   paragraph.append(line_break)
 soup.body.append(paragraph)
 
